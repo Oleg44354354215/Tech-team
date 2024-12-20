@@ -30,4 +30,6 @@
     background-color: var(--background);
     transition: background-color 300ms;
   }
-  
+  .hidden {
+    display: none;
+  }
