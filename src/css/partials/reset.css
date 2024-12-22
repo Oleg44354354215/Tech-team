@@ -32,3 +32,12 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+picture {
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
