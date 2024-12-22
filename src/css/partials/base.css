@@ -26,7 +26,7 @@
   }
   
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter Tight", sans-serif;;
     background-color: var(--background);
     transition: background-color 300ms;
   }
