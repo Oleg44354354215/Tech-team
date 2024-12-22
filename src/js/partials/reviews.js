@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import axios from 'axios';
 import 'swiper/css';
-const list = document.querySelector('.swiper-wrapper');
+const list = document.querySelector('.section-reviews .swiper-wrapper');
 const URL = 'https://portfolio-js.b.goit.study/api/reviews';
 
 const nextButton = document.querySelector(".swiper-next-buttonn");
