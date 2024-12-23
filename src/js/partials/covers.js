@@ -34,13 +34,6 @@ anItem.classList.replace( "covers__inner", "visually-hidden");
 
 
 
-
-
-
-
-
-
-
 function offset(el){
    const rect = el.getBoundingClientRect(), 
    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
@@ -48,21 +41,3 @@ function offset(el){
    return { top: rect.top + scrollTop, left: rect.left + scrollLeft}
 }
 
-
-
-
-
-
-
-// for(let i =0; i < animation.length; i++){
-//    const anItem = animation[i];
-//    //  anItem.classList.replace( "covers__inner", "visually-hidden");
-//    console.log(anItem);
-//       const scrollStart = window.innerHeight;
-//       console.log(scrollStart);
-//         if(scrollStart > heightSection){
-//     anItem.classList.replace( "visually-hidden", "covers__inner");
-//     return
-//      }
-//      anItem.classList.replace( "covers__inner", "visually-hidden");
-// }
