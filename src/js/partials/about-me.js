@@ -33,8 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /*const nextButton = document.querySelector('.swiper-button-next');*/
-
+  
   const swiper = new Swiper('.swiper', {
     modules: [Navigation, Keyboard, Mousewheel],
     slidesPerView: 2,
