@@ -30,6 +30,9 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 32px;
+    /*added 1*/
+    max-width: 343px;
+    width: 100%;
 }
 
 .benef-list {
@@ -38,7 +41,9 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 16px;
-    width: 90%;
+    /*added 2*/
+    max-width:343px;
+    width: 100%;
 
 }
 
@@ -53,10 +58,10 @@
     padding: 24px;
     background: #242527;
     width: 100%;
-    box-sizing: border-box;
-    
+ 
+    /*changed here*/
     /*fixed-6*/
-        width: 344px;
+        max-width: 344px;
 }
 
 
