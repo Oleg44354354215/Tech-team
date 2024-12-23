@@ -40,7 +40,7 @@ body {
     padding-left: 0;
     padding-right: 0;
     height: 508px;
-    background-image: url(../img/covers/elements_vectors.png);
+    background-image: url(/img/covers/elements_vectors.png);
     background-size: 1108px 784px;
     background-repeat: no-repeat;
     background-position: -450px center;
@@ -52,7 +52,7 @@ body {
     (min-resolution: 2dppx),
     (min-resolution: 192dpi) {
     .container_covers {
-      background-image: url(../img/covers/elements_vectors-2x.png);
+      background-image: url(/img/covers/elements_vectors-2x.png);
     }
   }
 
