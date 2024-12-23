@@ -16,10 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
      
       if (isActive) {
         currentItem.classList.remove('accordion__item--active');
-        svgUseElement.setAttribute('href', '../img/arrow.svg#IconClose'); // Встановлюємо іконку "закрити"
+        svgUseElement.setAttribute('href', '../img/arrow.svg#IconClose'); 
       } else {
         currentItem.classList.add('accordion__item--active');
-        svgUseElement.setAttribute('href', '../img/arrow.svg#IconOpen'); // Встановлюємо іконку "відкрити"
+        svgUseElement.setAttribute('href', '../img/arrow.svg#IconOpen'); 
       }
     });
   });
