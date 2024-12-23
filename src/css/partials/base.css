@@ -27,7 +27,7 @@
   
   body {
     font-family: "Inter Tight", sans-serif;
-    background-color: var(--background);
+    background-color: #1c1d20;
     transition: background-color 300ms;
   }
   .hidden {
