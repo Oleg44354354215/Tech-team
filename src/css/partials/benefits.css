@@ -30,9 +30,7 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: 32px;
-    /*added 1*/
-    max-width: 343px;
-    width: 100%;
+    
 }
 
 .benef-list {
@@ -141,7 +139,7 @@
     .benef-list {
         flex-direction: row;
         flex-wrap: wrap;
-        width: 704px;
+        max-width: 704px;
     }
 
     .benef-item {
