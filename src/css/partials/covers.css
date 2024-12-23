@@ -16,7 +16,26 @@ body {
   *::after {
     box-sizing: border-box;
   }
-  
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+}
+ .div{
+  height: 1500px;
+  background-color: blue;
+}  
+
+
   .container_covers {
     padding-left: 0;
     padding-right: 0;
@@ -36,13 +55,25 @@ body {
       background-image: url(../img/covers/elements_vectors-2x.png);
     }
   }
+
+
+
+
+
+
+
+
+
+
+
+
   
   .covers {
     position: absolute;
     /* right: -350px; */
     left: -50px;
     top: 360px;
-  
+    transition: visibility 1000ms linear;
     /* overflow: hidden; */
   }
   
@@ -51,6 +82,7 @@ body {
     height: 200px;
     display: flex;
     transform: rotate(17deg);
+    
   }
   
   .covers__line {
@@ -72,7 +104,7 @@ body {
   
   @keyframes marqueeLine {
     from {
-      transform: translateX(-10%);
+      transform: translateX(200%);
     }
   
     to {
@@ -87,6 +119,7 @@ body {
     }
   
     .container_covers {
+      padding: 0 ;
       height: 960px;
       background-size: 1288px 1004px;
       background-position: -400px -200px;
@@ -118,11 +151,12 @@ body {
   
   @media screen and (min-width: 1440px) {
     .container {
-      max-width: 1280px;
+      max-width: 1440px;
       padding: 0 100px;
     }
   
     .container_covers {
+      padding: 0;
       background-size: 1528px 1064px;
       background-position: center center;
     }
