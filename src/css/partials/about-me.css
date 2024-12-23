@@ -1,3 +1,6 @@
+body {
+  background-color: #1c1d20;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -99,7 +102,6 @@
 
 /* Section 2 */
 .accordion {
-  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -192,51 +194,53 @@
 
 /* Section 3 */
 .skills-slider {
-  min-width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0 auto;
-  overflow: hidden;
+  position: relative;
+  height: 132px;
+  margin-top: 32px;
 }
 
-.swiper {
-  position: relative;
-  overflow: visible;
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: rgba(250, 250, 250, 0.4);
+}
+.icon-right {
+  width: 28px;
+  height: 28px;
+  fill: rgba(250, 250, 250, 0.4);
 }
 
 .swiper-wrapper {
   display: flex;
-  align-items: center;
-  padding-left: 16px;
 }
-
 .swiper-slide {
-  flex: 0 0 auto;
-  text-align: center;
+  color: #fafafa;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
-  color: #fafafa;
+  text-align: center;
+
   width: 130px !important;
   height: 130px !important;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
   border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  background-color: #242527;
 }
 
 .swiper-slide-active {
   background-color: #ed3b44;
 }
 
-.swiper-button-next {
-  right: 10px;
+@media screen and (min-width: 768px) {
+  .icon-right {
+    width: 40px;
+    height: 40px;
+  }
 }
 
-.swiper-button-next::after {
-  width: 28px;
-  height: 28px;
+@media screen and (min-width: 1440px) {
 }
