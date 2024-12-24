@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  
   const firstItem = document.querySelector('.accordion__item');
   if (firstItem) {
     const firstContent = firstItem.querySelector('.accordion__content');
@@ -39,8 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  /*const nextButton = document.querySelector(".swiper-next-buttonn");*/
-
+  
   const swiper = new Swiper('.swiper', {
     modules: [Navigation, Keyboard, Mousewheel],
     slidesPerView: 2,
@@ -58,8 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       invert: true,
       passive: true,
     },
-    touchEventsTarget: 'wrapper', 
-    /*createElements: true,*/
+    touchEventsTarget: 'wrapper',     
     breakpoints: {
       375: {
         slidesPerView: 2,
