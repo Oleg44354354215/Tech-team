@@ -72,5 +72,6 @@
             <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="miter"
                 stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2" d="M24 20l-8-8-8 8"></path>
         </symbol>
-    </defs>
+</defs>
 </svg>
+
