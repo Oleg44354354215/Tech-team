@@ -1,34 +1,34 @@
 
 @import '../../../node_modules/modern-normalize/modern-normalize.css';
 
-@font-face {
-    font-family: 'Inter';
+/* @font-face {
+    font-family: "Inter Tight";
     font-weight: 400;
-    src: local('Inter'), url('./fonts/Inter-Regular.woff2') format('woff2'),
-      url('./fonts/Inter-Regular.woff') format('woff'),
-      url('./fonts/Inter-Regular.ttf') format('truetype');
+    src: local('Inter Tight'), url('../fonts/Inter-Regular.woff2') format('woff2'),
+      url('../fonts/Inter-Regular.woff') format('woff'),
+      url('../fonts/Inter-Regular.ttf') format('truetype');
   }
-  
   @font-face {
-    font-family: 'Inter';
+    font-family: "Inter Tight";
     font-weight: 500;
-    src: local('Inter'), url('./fonts/Inter-Medium.woff2') format('woff2'),
-      url('./fonts/Inter-Medium.woff') format('woff'),
-      url('./fonts/Inter-Medium.ttf') format('truetype');
+    src: local('Inter Tight'), url('../fonts/Inter-Medium.woff2') format('woff2'),
+      url('../fonts/Inter-Medium.woff') format('woff'),
+      url('../fonts/Inter-Medium.ttf') format('truetype');
   }
   
   @font-face {
-    font-family: 'Inter';
+    font-family: "Inter Tight";
     font-weight: 600;
-    src: local('Inter'), url('./fonts/Inter-SemiBold.woff2') format('woff2'),
-      url('./fonts/Inter-SemiBold.woff') format('woff'),
-      url('./fonts/Inter-SemiBold.ttf') format('truetype');
-  }
+    src: local('Inter Tight'), url('../fonts/Inter-SemiBold.woff2') format('woff2'),
+      url('../fonts/Inter-SemiBold.woff') format('woff'),
+      url('../fonts/Inter-SemiBold.ttf') format('truetype');
+  } */
   
   body {
-    font-family: "Inter Tight", sans-serif;
-    background-color: var(--background);
+    font-family:"Inter Tight", sans-serif;
+    background-color: #1c1d20;
     transition: background-color 300ms;
+
   }
   .hidden {
     display: none;
