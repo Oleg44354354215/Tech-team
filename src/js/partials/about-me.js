@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  const nextButton = document.querySelector(".swiper-next-buttonn");
+  /*const nextButton = document.querySelector(".swiper-next-buttonn");*/
 
   const swiper = new Swiper('.swiper', {
     modules: [Navigation, Keyboard, Mousewheel],
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 3,
       },
       1440: {
-        slidesPerView: 6,        
+        slidesPerView: 6,
       },
     },
   });
