@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
+  const nextButton = document.querySelector(".swiper-next-buttonn");
+
   const swiper = new Swiper('.swiper', {
     modules: [Navigation, Keyboard, Mousewheel],
     slidesPerView: 2,
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
     speed: 800,
     navigation: {
-      nextEl: '.swiper-button-next',
+      nextEl: '.skills-swiper-button',
     },
     keyboard: {
       enabled: true,

@@ -199,6 +199,9 @@ body {
   .accordion__content {
     padding-left: 696px;
   }
+  .accordion__text {
+    width: 612px;
+  }
 }
 
 /* Section 3 */
@@ -211,7 +214,9 @@ body {
   margin-bottom: 32px;
   gap: 0;
 }
-
+.swiper-wrapper {
+  width: 1312px;
+}
 .swiper-skills-container.swiper {
   margin-left: 0;
 }
@@ -243,7 +248,7 @@ body {
   margin-top: 32px;
 }
 
-.swiper-button-next {
+.skills-swiper-button {
   background-color: transparent;
   border: none;
   padding: 0;
