@@ -1,7 +1,7 @@
 
 @import '../../../node_modules/modern-normalize/modern-normalize.css';
 
-@font-face {
+/* @font-face {
     font-family: "Inter Tight";
     font-weight: 400;
     src: local('Inter Tight'), url('../fonts/Inter-Regular.woff2') format('woff2'),
@@ -22,7 +22,7 @@
     src: local('Inter Tight'), url('../fonts/Inter-SemiBold.woff2') format('woff2'),
       url('../fonts/Inter-SemiBold.woff') format('woff'),
       url('../fonts/Inter-SemiBold.ttf') format('truetype');
-  }
+  } */
   
   body {
     font-family:"Inter Tight", sans-serif;
