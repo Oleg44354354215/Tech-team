@@ -211,11 +211,16 @@ body {
 
 .skills-list {
   margin-top: 32px;
-  margin-bottom: 32px;
+  /*margin-bottom: 32px;*/
   gap: 0;
 }
-.swiper-wrapper {
+
+/*.swiper-wrapper {
   width: 1312px;
+}*/
+
+.swiper-slide.slide-items {
+  width: 130px;
 }
 .swiper-skills-container.swiper {
   margin-left: 0;
@@ -279,19 +284,23 @@ body {
     height: 200px;
     font-size: 20px;
   }
-  .swiper {
+  /*.swiper {
     max-width: 704px;
-  }
+  }*/
 }
 
 @media screen and (min-width: 1440px) {
-  .swiper {
+  /*.swiper {
     max-width: 1272px;
-  }
+  }*/
+
   .skills-list {
     margin-top: 72px;
   }
   .swiper-skills-container.swiper {
     margin-left: 32px;
+  }
+  .skills-arrow {
+    margin-right: 32px;
   }
 }

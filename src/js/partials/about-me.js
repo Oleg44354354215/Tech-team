@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       passive: true,
     },
     touchEventsTarget: 'wrapper', 
-    createElements: true,
+    /*createElements: true,*/
     breakpoints: {
       375: {
         slidesPerView: 2,
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 3,
       },
       1440: {
-        slidesPerView: 6,
+        slidesPerView: 6,        
       },
     },
   });
