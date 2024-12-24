@@ -3,6 +3,6 @@ import 'accordion-js/dist/accordion.min.css';
 
 const accordion = new Accordion('.faq-list', {
   duration: 250,
-  showMultiple: false,
+  showMultiple: true,
   triggerClass: 'faq-item-button',
 });
