@@ -132,15 +132,23 @@ body {
   padding: 9px;
   width: 36px;
   height: 36px;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
+
+.accordion__item--active .accordion__button svg {
+  transform: rotate(360deg); /* Перевертаємо іконку при активному стані */
+}
+
 .open-close {
   width: 18px;
   height: 18px;
 }
 
 .accordion__content {
-  display: none;
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
 }
 
 .accordion__text {
@@ -157,6 +165,7 @@ body {
 .accordion__item--active .accordion__content {
   display: block;
   color: #fafafa;
+  max-height: 1000px;
 }
 
 .accordion__text__last:not(:last-child) {
@@ -194,51 +203,68 @@ body {
 
 /* Section 3 */
 .skills-slider {
-  position: relative;
-  height: 132px;
-  margin-top: 32px;
+  display: flex;
 }
 
-.swiper-wrapper {
-  display: flex;
+.skills-list {
+  margin-top: 32px;
+  margin-bottom: 32px;
   gap: 0;
 }
 
-.swiper-button-next {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: rgba(250, 250, 250, 0.4);
-}
-.icon-right {
-  width: 28px;
-  height: 28px;
-  fill: rgba(250, 250, 250, 0.4);
-}
-
-.swiper-slide--item {
-  color: #fafafa;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 1px solid rgba(250, 250, 250, 0.2);
+.swiper-skills-container.swiper {
+  margin-left: 0;
 }
 
 .swiper-slide-active .swiper-slide--item {
   background-color: #ed3b44;
 }
 
+.swiper-slide--item {
+  display: flex;
+  border-radius: 100px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  color: #fafafa;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+.skills-arrow {
+  display: flex;
+  align-content: flex-end;
+  height: 130px;
+  margin-top: 32px;
+}
+
+.swiper-button-next {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.icon-right {
+  fill: transparent;
+  stroke-width: 2px;
+  stroke: rgba(250, 250, 250, 0.4);
+  width: 28px;
+  height: 28px;
+  transition: stroke 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 @media screen and (min-width: 768px) {
+  .skills-list {
+    margin-top: 64px;
+  }
+  .skills-arrow {
+    height: 200px;
+    margin-top: 64px;
+  }
   .icon-right {
     width: 40px;
     height: 40px;
@@ -247,5 +273,20 @@ body {
     width: 200px;
     height: 200px;
     font-size: 20px;
+  }
+  .swiper {
+    max-width: 704px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .swiper {
+    max-width: 1272px;
+  }
+  .skills-list {
+    margin-top: 72px;
+  }
+  .swiper-skills-container.swiper {
+    margin-left: 32px;
   }
 }
