@@ -2,6 +2,7 @@
     max-width: 100%;
     padding: 32px 0;
     background: #1C1D20;
+    position: relative;
 }
 
 .container-foot {
@@ -55,6 +56,14 @@
     resize: none;
     height: 44px;
     overflow: hidden;
+    color: #FAFAFA;
+    transition: border-color 0.3s;
+}
+.footer-input-one:focus,
+.footer-input-one:hover {
+    border-bottom: 1px solid #FAFAFA;
+    opacity:1;
+    color: #FAFAFA;
 }
 
 .footer-button {
@@ -128,6 +137,73 @@
     border-color: #FAFAFA;
     color: #FAFAFA;
 }
+.footer-modal{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1c1d20;
+    border: 1px solid rgba(250, 250, 250, 0.1);
+    border-radius: 20px;
+    padding: 64px 32px;
+    width: 343px;
+    height: 276px;
+}
+.modal-btn{
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-text{
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.modal-title{
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #FAFAFA;
+}
+.modal-par{
+    width: 279px;
+    height: 72px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    font-family: "Inter Tight", sans-serif;
+    color: #FAFAFA;
+    opacity: 60%;
+}
+.svg-modal-btn{
+    fill: #FAFAFA;
+}
+.modal-overlay {
+    display: none;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 @media screen and (min-width: 768px) {
     .footer {
@@ -157,6 +233,7 @@
     }
 
     .footer-form {
+        flex-wrap: nowrap;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -207,11 +284,21 @@
     .footer-cont-email {
         width: 175px;
     }
-
-    .input {
-        overflow-y: auto;
-        transition: overflow-y 0.3s;
-        max-height: 200px;
+    .footer-modal{
+        display: flex;
+        justify-content: center;
+        padding: 64px 49px;
+        width: 492px;
+        height: 246px;
+    }
+    .modal-text{
+        justify-content: center;
+    }
+    .modal-par{
+        width: 364px;
+    }
+    .modal-title{
+        white-space: nowrap;
     }
 }
 
@@ -230,5 +317,16 @@
 
     .footer-button {
         margin-left: 54px;        
+    }
+    .footer-modal{
+        width: 492px;
+        height: 246px;
+    }
+    .modal-text{
+
+        width: 364px;
+    }
+    .modal-par{
+        width: 364px;
     }
 }
