@@ -9,20 +9,33 @@ document.addEventListener("DOMContentLoaded", function() {
     const emailInput = document.getElementById("email");
     const commentInput = document.getElementById("comment");
     const modalCloseButton = document.querySelector(".modal-btn");
+    let isModalOpen = false;
+
+    // Повідомлення про успіх і помилку
+    const successMessage = document.createElement("div");
+    successMessage.className = "success-message";
+    successMessage.textContent = "Success!";
+    emailInput.parentNode.insertBefore(successMessage, emailInput.nextSibling);
+
+    const errorMessage = document.createElement("div");
+    errorMessage.className = "error-message";
+    errorMessage.textContent = "Invalid email, try again";
+    emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
 
     function closeModal() { 
         modal.style.display = "none";
         modalOverlay.style.display = "none"; 
+        isModalOpen = false;
     }
     
     closeModal();
 
     function showModal() {
-        modalOverlay.style.display = "flex";
-    }
-
-    function closeModal() {
-        modalOverlay.style.display = "none";
+        if (!isModalOpen) {
+            modal.style.display = "flex";
+            modalOverlay.style.display = "flex";
+            isModalOpen = true;
+        }
     }
 
     form.addEventListener("submit", function(event) {
@@ -35,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.addEventListener("keydown", function(event) {
-        if (event.key === "Escape") {
+        if (event.key === "Escape" && isModalOpen) {
             closeModal();
         }
     });
@@ -78,24 +91,17 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     emailInput.addEventListener("input", function() {
-        if (emailInput === document.activeElement) {
-            successMessage.style.display = "none";
-            emailInput.style.borderColor = "";
-        }
-    });
-
-    emailInput.addEventListener("blur", function() {
-        const emailValue = emailInput.value;
-        if (validateEmail(emailValue)) {
-            emailInput.style.borderColor = "#3CBC81";
-            successMessage.style.color = "#3CBC81";
-            successMessage.innerText = "Success!";
+        if (validateEmail(emailInput.value)) {
+            emailInput.classList.add("success");
+            emailInput.classList.remove("error");
+            successMessage.style.display = "block";
+            errorMessage.style.display = "none";
         } else {
-            emailInput.style.borderColor = "#E74A3B";
-            successMessage.style.color = "#E74A3B";
-            successMessage.innerText = "Invalid email, try again";
+            emailInput.classList.add("error");
+            emailInput.classList.remove("success");
+            successMessage.style.display = "none";
+            errorMessage.style.display = "block";
         }
-        successMessage.style.display = "block";
     });
 
     form.addEventListener("submit", function(event) {
