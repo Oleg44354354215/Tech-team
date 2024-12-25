@@ -5,6 +5,7 @@
   background-position: center, center;
   max-width: 1440px;
   padding: 281px 0px 32px;
+  margin-bottom: 0;
 }
 @media screen and (-webkit-min-device-pixel-radio: 2),
   (min-resolution: 2dppx),
