@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  
   const firstItem = document.querySelector('.accordion__item');
   if (firstItem) {
     const firstContent = firstItem.querySelector('.accordion__content');
@@ -37,9 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
       firstSvgUse.setAttribute('href', './img/sprite.svg#IconOpen');
     }
   }
-  
-  
-  const swiper = new Swiper('.swiper', {
+
+  const swiper = new Swiper('.swiper-skills-container', {
     modules: [Navigation, Keyboard, Mousewheel],
     slidesPerView: 2,
     spaceBetween: 0,
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       invert: true,
       passive: true,
     },
-    touchEventsTarget: 'wrapper',     
+    touchEventsTarget: 'wrapper', 
     breakpoints: {
       375: {
         slidesPerView: 2,
