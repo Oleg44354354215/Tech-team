@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const commentInput = document.getElementById("comment");
     const modalCloseButton = document.querySelector(".modal-btn");
     let isModalOpen = false;
+    let typingTimer;
+    const typingInterval = 1000; // 1 секунда
 
     const successMessage = document.createElement("div");
     successMessage.className = "success-message";
@@ -21,13 +23,15 @@ document.addEventListener("DOMContentLoaded", function() {
     errorMessage.textContent = "Invalid email, try again";
     emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
 
-    function closeModal() { 
+    modal.style.display = "none";
+    modalOverlay.style.display = "none";
+
+    function closeModal() {
         modal.style.display = "none";
-        modalOverlay.style.display = "none"; 
+        modalOverlay.style.display = "none";
+        hideMessages();
         isModalOpen = false;
     }
-    
-    closeModal();
 
     function showModal(message) {
         if (!isModalOpen) {
@@ -35,7 +39,19 @@ document.addEventListener("DOMContentLoaded", function() {
             modalOverlay.style.display = "flex";
             isModalOpen = true;
         }
-        document.querySelector(".modal-message").innerText = message;
+    }
+
+    function hideMessages() {
+        successMessage.style.display = "none";
+        errorMessage.style.display = "none";
+    }
+
+    function resetInputs() {
+        emailInput.value = "";
+        commentInput.value = "";
+        emailInput.classList.remove("success", "error");
+        emailInput.style.borderBottom = "1px solid rgba(250, 250, 250, 0.2)";
+        commentInput.style.borderBottom = "1px solid rgba(250, 250, 250, 0.2)";
     }
 
     form.addEventListener("submit", function(event) {
@@ -47,6 +63,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (validateEmail(emailValue)) {
             fakeBackendRequest(emailValue, commentValue)
                 .then(response => {
+                    resetInputs();
+                    hideMessages();
                     showModal("Success");
                 })
                 .catch(error => {
@@ -91,6 +109,30 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     emailInput.addEventListener("input", function() {
+        clearTimeout(typingTimer);
+
+        typingTimer = setTimeout(function() {
+            if (validateEmail(emailInput.value)) {
+                emailInput.classList.add("success");
+                emailInput.classList.remove("error");
+                successMessage.style.display = "block";
+                errorMessage.style.display = "none";
+            } else {
+                emailInput.classList.add("error");
+                emailInput.classList.remove("success");
+                successMessage.style.display = "none";
+                errorMessage.style.display = "block";
+            }
+
+            if (emailInput.value === "") {
+                hideMessages();
+            }
+        }, typingInterval);
+    });
+
+    emailInput.addEventListener("blur", function() {
+        clearTimeout(typingTimer);
+
         if (validateEmail(emailInput.value)) {
             emailInput.classList.add("success");
             emailInput.classList.remove("error");
@@ -101,6 +143,10 @@ document.addEventListener("DOMContentLoaded", function() {
             emailInput.classList.remove("success");
             successMessage.style.display = "none";
             errorMessage.style.display = "block";
+        }
+
+        if (emailInput.value === "") {
+            hideMessages();
         }
     });
 });
