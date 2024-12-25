@@ -250,6 +250,9 @@ input.error {
   .footer-input-one {
     width: 245px;
   }
+  .input{
+    padding-top: 10px;
+  }
   .footer-button {
     justify-content: center;
     width: 150px;
@@ -284,9 +287,6 @@ input.error {
   .footer-cont-email {
     width: 175px;
   }
-  .input::placeholder {
-    top: 20px;
-}
   .footer-modal {
     justify-content: center;
     padding: 64px 49px;
