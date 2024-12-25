@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const modalCloseButton = document.querySelector(".modal-btn");
     let isModalOpen = false;
     let typingTimer;
-    const typingInterval = 1000; // 1 секунда
+    const typingInterval = 1000;
 
     const successMessage = document.createElement("div");
     successMessage.className = "success-message";
