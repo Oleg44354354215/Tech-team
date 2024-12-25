@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       onlyInViewport: true,
     },
     mousewheel: {      
-      invert: false,
+      invert: true,
       passive: true,
     },
     touchEventsTarget: 'wrapper', 
