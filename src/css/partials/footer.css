@@ -61,7 +61,6 @@
 }
 .input::placeholder {
     color: rgba(250, 250, 250, 0.6);
-    padding: 9px 0;
 }
 .footer-input-one:focus,
 .footer-input-one:hover {
@@ -106,9 +105,6 @@
 }
 .footer-li {
   width: 190px;
-}
-.footer-list {
-  width: 135px;
 }
 .cont {
   color: #fafafa;
@@ -288,6 +284,9 @@ input.error {
   .footer-cont-email {
     width: 175px;
   }
+  .input::placeholder {
+    top: 20px;
+}
   .footer-modal {
     justify-content: center;
     padding: 64px 49px;
