@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const modalCloseButton = document.querySelector(".modal-btn");
     let isModalOpen = false;
 
-    // Повідомлення про успіх і помилку
     const successMessage = document.createElement("div");
     successMessage.className = "success-message";
     successMessage.textContent = "Success!";
@@ -30,17 +29,32 @@ document.addEventListener("DOMContentLoaded", function() {
     
     closeModal();
 
-    function showModal() {
+    function showModal(message) {
         if (!isModalOpen) {
             modal.style.display = "flex";
             modalOverlay.style.display = "flex";
             isModalOpen = true;
         }
+        document.querySelector(".modal-message").innerText = message;
     }
 
     form.addEventListener("submit", function(event) {
         event.preventDefault();
-        showModal();
+
+        const emailValue = emailInput.value;
+        const commentValue = commentInput.value;
+
+        if (validateEmail(emailValue)) {
+            fakeBackendRequest(emailValue, commentValue)
+                .then(response => {
+                    showModal("Success");
+                })
+                .catch(error => {
+                    showModal("Error");
+                });
+        } else {
+            showModal("Invalid email");
+        }
     });
 
     modalCloseButton.addEventListener("click", function() {
@@ -76,20 +90,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     
-    function showBanner(title, message) {
-        const banner = document.getElementById("banner");
-        const bannerTitle = document.getElementById("banner-title");
-        const bannerMessage = document.getElementById("banner-message");
-
-        bannerTitle.innerText = title;
-        bannerMessage.innerText = message;
-        banner.style.display = "block";
-
-        setTimeout(() => {
-            banner.style.display = "none";
-        }, 5000);
-    }
-
     emailInput.addEventListener("input", function() {
         if (validateEmail(emailInput.value)) {
             emailInput.classList.add("success");
@@ -101,26 +101,6 @@ document.addEventListener("DOMContentLoaded", function() {
             emailInput.classList.remove("success");
             successMessage.style.display = "none";
             errorMessage.style.display = "block";
-        }
-    });
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const emailValue = emailInput.value;
-        const commentValue = commentInput.value;
-
-        if (validateEmail(emailValue)) {
-            // Simulate backend request
-            fakeBackendRequest(emailValue, commentValue)
-                .then(response => {
-                    showModal();
-                })
-                .catch(error => {
-                    showModal();
-                });
-        } else {
-            showModal();
         }
     });
 });

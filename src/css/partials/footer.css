@@ -7,7 +7,7 @@
 .container-foot {
   display: flex;
   flex-direction: column;
-  padding: 32px 16px;
+  padding: 0 16px 32px;
   gap: 64px;
 }
 .footer-img {
@@ -16,20 +16,21 @@
   margin-right: 8px;
 }
 .footer-span {
+  margin-left: 8px;
   color: #ed3b44;
   display: inline-block;
 }
 .footer-parag {
-  display: flex;
-  flex-wrap: wrap;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 100%;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  vertical-align: middle;
-  row-gap: 4px;
-  color: #fafafa;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    row-gap: 4px;
+    color: #fafafa;
 }
 .footer-form {
   flex-wrap: wrap;
@@ -46,7 +47,6 @@
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
   outline: none;
   margin: 0;
-  padding: 0 0 20px 0;
   box-sizing: border-box;
   width: 100%;
   resize: none;
@@ -54,6 +54,14 @@
   overflow: hidden;
   color: #fafafa;
   transition: border-color 0.3s;
+}
+.footer-input-one::placeholder {
+    color: rgba(250, 250, 250, 0.6);
+    padding: 0 0 20px 0;
+}
+.input::placeholder {
+    color: rgba(250, 250, 250, 0.6);
+    padding: 0 0 20px 0;
 }
 .footer-input-one:focus,
 .footer-input-one:hover {
@@ -125,6 +133,7 @@
   color: #fafafa;
 }
 .footer-modal {
+  z-index: 1;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 50%;
@@ -194,20 +203,16 @@
   justify-content: center;
 }
 
-
-/* Стиль для повідомлення про успіх */
 .success-message {
     color: #3CBC81;
     font-size: 14px;
-    margin-top: 8px;
+    margin-top: -14px;
     display: none;
 }
-
-/* Стиль для повідомлення про помилку */
 .error-message {
     color: #E74A3B;
     font-size: 14px;
-    margin-top: 8px;
+    margin-top: -14px;
     display: none;
 }
 input.success {
@@ -218,7 +223,7 @@ input.error {
 }
 @media screen and (min-width: 768px) {
   .container-foot {
-    padding: 80px 32px 169px;
+    padding: 0 32px 169px;
     gap: 18px;
   }
   .footer-img {
@@ -302,12 +307,12 @@ input.error {
   .error-message{
     position: absolute;
     margin: 0;
-    top: 107px;
+    top: 98px;
   }
 }
 @media screen and (min-width: 1440px) {
   .container-foot {
-    padding: 80px 196px 169px;
+    padding: 0 196px 169px;
   }
   .input {
     overflow-y: hidden;
