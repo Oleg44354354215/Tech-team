@@ -9,10 +9,6 @@
   border: 0;
 }
 
-.about-me {
-  background: #1c1d20;
-}
-
 /* Section 1 */
 .about-me__intro {
   display: flex;
