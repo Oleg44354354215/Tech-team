@@ -97,6 +97,7 @@ li a {
   }
   .item-mail {
     width: 223px;
+    max-width: none;
     height: 55px;
   }
   .contact-list {
