@@ -7,7 +7,7 @@
 .container-foot {
   display: flex;
   flex-direction: column;
-  padding: 0 16px 32px;
+  padding: 32px 16px 32px;
   gap: 64px;
 }
 .footer-img {
@@ -220,7 +220,7 @@ input.error {
 }
 @media screen and (min-width: 768px) {
   .container-foot {
-    padding: 0 32px 169px;
+    padding: 80px 32px 169px;
     gap: 18px;
   }
   .footer-img {
@@ -311,7 +311,7 @@ input.error {
 }
 @media screen and (min-width: 1440px) {
   .container-foot {
-    padding: 0 196px 169px;
+    padding: 80px 196px 169px;
   }
   .input {
     overflow-y: hidden;

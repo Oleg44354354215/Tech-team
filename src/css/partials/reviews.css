@@ -9,7 +9,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 20px;
+    gap: 12px;
 }
 .swiper-button-teg {
     display: flex;
@@ -136,6 +136,8 @@ font-family: "Inter Tight", sans-serif;
     .reviews-descreiption{
        width: 284px; 
     }
-  
+  .section-reviews{
+    padding-bottom: 170px;
+  }
 
 }

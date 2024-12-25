@@ -93,7 +93,7 @@ body {
     justify-content: center;
     width: calc(100% / 10);
     animation-name: marqueeLine;
-    animation-duration: 8s;
+    animation-duration: 20s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     width: 282px;
@@ -117,7 +117,9 @@ body {
       max-width: 768px;
       padding: 0 32px;
     }
-  
+    .covers-section{
+      padding-top: 96px;
+    }
     .container_covers {
       padding: 0 ;
       height: 960px;
@@ -140,7 +142,7 @@ body {
   
     .covers__inner {
       /* height: 22vh; */
-      height: 370px;
+      height: 400px;
     }
   
     .covers__img {
@@ -153,7 +155,10 @@ body {
     .container {
       max-width: 1440px;
     }
-  
+        .covers-section {
+          padding-top: 164px;
+          padding-bottom: 158px;
+        }
     .container_covers {
       padding: 0;
       background-size: 1528px 1064px;
@@ -171,6 +176,6 @@ body {
       width: 600px;
     }
     .covers__inner {
-      height: 400px;
+      height: 450px;
     }
   }

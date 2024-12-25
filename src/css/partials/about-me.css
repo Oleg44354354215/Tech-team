@@ -11,6 +11,11 @@
 
 .about-me {
   background: #1c1d20;
+  padding-top: 64px;
+}
+.section{
+  padding-bottom: 64px;
+  margin-bottom: 0;
 }
 
 /* Section 1 */
@@ -20,7 +25,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
 }
 
 .about-me__intro-text {
@@ -69,7 +74,9 @@
     min-width: 704px;
     height: 700px;
   }
-
+.section {
+  padding-bottom: 96px;
+}
   .about-me__intro-image {
     min-width: 704px;
     height: 700px;
@@ -84,7 +91,9 @@
   .about-me__intro {
     flex-direction: row;
   }
-
+.section {
+  padding-bottom: 164px;
+}
   .about-me__intro-text {
     min-width: 680px;
   }
@@ -116,6 +125,7 @@
   background-color: #1c1d20;
   border: none;
   padding: 0 0 12px 0;
+  padding-top: 12px;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -298,8 +308,12 @@ letter-spacing: -0.02em;
 
 @media screen and (min-width: 1440px) {
   .skills-slider {
-    margin-top: 72px;
+    margin-top: 64px;
     padding: 32px;
+    padding-bottom: 0;
     gap: 72px;
   }
+    .about-me {
+      padding-top: 96px;
+    }
 }

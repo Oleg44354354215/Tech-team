@@ -73,7 +73,7 @@
     display: inline-block;
     border-radius: 60px;
     padding: 13px 32px;
-    min-width: 141px;
+    max-width: 141px;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: -0.02em;
@@ -92,7 +92,7 @@
     background-color: #242527;
 }
 
-.projects-arrows {
+.projects-container .projects-arrows {
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -100,6 +100,7 @@
     justify-content: center;
     flex-direction: row;
     gap: 12px;
+    margin-top: 0;
 }
 
 .projects-swiper-button,
@@ -187,7 +188,9 @@
         justify-content: space-between;
 
     }
-
+.projects-list-item-ref{
+    height: 55px;
+}
     .projects-list-item-tech-list {
         margin-bottom: 223px;
     }
