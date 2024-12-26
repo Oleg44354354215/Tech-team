@@ -1,0 +1,57 @@
+ .svg-scroll-top {
+     fill: rgb(255, 255, 255);
+ }
+
+ .but-scroll-top {
+     position: fixed;
+     display: flex;
+     cursor: pointer;
+     background-color: rgb(237, 59, 68);
+     border: none;
+     border-radius: 50%;
+     align-items: center;
+     justify-content: center;
+     width: 40px;
+     height: 40px;
+     right: 20px;
+     bottom: 60px;
+     transition: 300ms;
+    opacity: 1;
+    visibility: visible;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-name: bounce;
+    animation-timing-function: ease;
+ }
+
+ .but-scroll-top:hover,
+  .but-scroll-top:focus{
+     background-color: rgb(173, 33, 40);
+ }
+
+ .scroll-hidden {
+     opacity: 0;
+     visibility: hidden;
+ }
+
+ @keyframes bounce {
+     0% {
+         transform: scale(1, 1) translateY(0);
+     }
+
+     10% {
+         transform: scale(1.1, 0.9) translateY(0);
+     }
+
+     30% {
+         transform: scale(0.9, 1.1) translateY(-30px);
+     }
+
+     50% {
+         transform: scale(1, 1) translateY(0);
+     }
+
+     100% {
+         transform: scale(1, 1) translateY(0);
+     }
+ }

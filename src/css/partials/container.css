@@ -16,6 +16,9 @@
     .section{
       margin-bottom: 96px;
     }
+        .but-scroll-top {
+          display: block;
+        }
   }
   
   @media screen and (min-width: 1440px) {

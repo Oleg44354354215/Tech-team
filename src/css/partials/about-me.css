@@ -11,8 +11,12 @@
 
 .about-me {
   background: #1c1d20;
+  padding-top: 64px;
 }
-
+.section{
+  margin-bottom: 0;
+  padding-bottom: 64px;
+}
 /* Section 1 */
 .about-me__intro {
   display: flex;
@@ -33,7 +37,7 @@
   color: #fafafa;
   border-radius: 24px;
   background-color: #242527;
-  min-width: 320px;
+  /* min-width: 320px; */
   max-width: 375px;
   height: 500px;
 }
@@ -48,7 +52,7 @@
 
 .about-me__intro-image {
   display: flex;
-  min-width: 320px;
+  /* min-width: 320px; */
   max-width: 375px;
   height: 500px;
 }
@@ -68,7 +72,12 @@
     min-width: 704px;
     height: 700px;
   }
-
+  .br-ku{
+    display: none;
+  }
+    .section {
+      padding-bottom: 96px;
+    }
   .about-me__intro-image {
     min-width: 704px;
     height: 700px;
@@ -83,7 +92,15 @@
   .about-me__intro {
     flex-direction: row;
   }
-
+.about-me {
+  padding-top: 96px;
+}
+.br-ku{
+  display: block;
+}
+ .section {
+   padding-bottom: 164px;
+ }
   .about-me__intro-text {
     min-width: 680px;
   }
