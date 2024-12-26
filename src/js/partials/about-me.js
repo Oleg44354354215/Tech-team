@@ -6,38 +6,16 @@ import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const accordionButtons = document.querySelectorAll('.accordion__button');
-
-  accordionButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const currentItem = button.parentElement;
-      const content = currentItem.querySelector('.accordion__content');
-      const isActive = currentItem.classList.contains('accordion__item--active');
-      const svgUseElement = button.querySelector('svg use');
-
-      if (isActive) {        
-        content.style.maxHeight = null;
-        currentItem.classList.remove('accordion__item--active');
-        svgUseElement.setAttribute('href', './img/sprite.svg#IconClose');
-      } else {        
-        content.style.maxHeight = `${content.scrollHeight}px`;
-        currentItem.classList.add('accordion__item--active');
-        svgUseElement.setAttribute('href', './img/sprite.svg#IconOpen');
-      }
-    });
+  new Accordion('.accordion-list', {
+    duration: 250,
+    showMultiple: true,
+    collapse: true,
+    openOnInit: [0],
+    elementClass: 'accordion__item',
+    triggerClass: 'accordion__button',
+    panelClass: 'accordion__content',
+    activeClass: 'accordion__item--active',
   });
-
-  
-  const firstItem = document.querySelector('.accordion__item');
-  if (firstItem) {
-    const firstContent = firstItem.querySelector('.accordion__content');
-    firstItem.classList.add('accordion__item--active');
-    firstContent.style.maxHeight = `${firstContent.scrollHeight}px`;
-    const firstSvgUse = firstItem.querySelector('.accordion__button svg use');
-    if (firstSvgUse) {
-      firstSvgUse.setAttribute('href', './img/sprite.svg#IconOpen');
-    }
-  }
 
   const swiper = new Swiper('.swiper-skills-container', {
     modules: [Navigation, Keyboard, Mousewheel],
@@ -52,11 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
       enabled: true,
       onlyInViewport: true,
     },
-    mousewheel: {      
+    mousewheel: {
       invert: true,
       passive: true,
     },
-    touchEventsTarget: 'wrapper', 
+    touchEventsTarget: 'wrapper',
     breakpoints: {
       375: {
         slidesPerView: 2,

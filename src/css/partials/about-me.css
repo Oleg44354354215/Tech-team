@@ -11,11 +11,6 @@
 
 .about-me {
   background: #1c1d20;
-  padding-top: 64px;
-}
-.section{
-  padding-bottom: 64px;
-  margin-bottom: 0;
 }
 
 /* Section 1 */
@@ -25,7 +20,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  /* margin-bottom: 12px; */
+  margin-bottom: 12px;
 }
 
 .about-me__intro-text {
@@ -38,7 +33,7 @@
   color: #fafafa;
   border-radius: 24px;
   background-color: #242527;
-  /* min-width: 320px; */
+  min-width: 320px;
   max-width: 375px;
   height: 500px;
 }
@@ -53,7 +48,7 @@
 
 .about-me__intro-image {
   display: flex;
-  /* min-width: 320px; */
+  min-width: 320px;
   max-width: 375px;
   height: 500px;
 }
@@ -68,15 +63,12 @@
 @media screen and (min-width: 768px) {
   .about-me__intro-text {
     font-size: 38px;
-    line-height: 1.05;
-    letter-spacing: -0.03em;
+    line-height: 1.5;
     padding: 64px;
     min-width: 704px;
     height: 700px;
   }
-.section {
-  padding-bottom: 96px;
-}
+
   .about-me__intro-image {
     min-width: 704px;
     height: 700px;
@@ -91,9 +83,7 @@
   .about-me__intro {
     flex-direction: row;
   }
-.section {
-  padding-bottom: 164px;
-}
+
   .about-me__intro-text {
     min-width: 680px;
   }
@@ -108,7 +98,7 @@
 }
 
 /* Section 2 */
-.accordion {
+.accordion-list {
   padding: 0;
   margin: 0;
 }
@@ -125,7 +115,6 @@
   background-color: #1c1d20;
   border: none;
   padding: 0 0 12px 0;
-  padding-top: 12px;
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -144,7 +133,7 @@
 }
 
 .accordion__item--active .accordion__button svg {
-  transform: rotate(360deg); /* Перевертаємо іконку при активному стані */
+  transform: rotate(180deg);
 }
 
 .open-close {
@@ -154,10 +143,9 @@
 
 .accordion__content {
   display: block;
-  color:transparent;
-  max-height: 0;
+  height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: height 0.25s ease;
 }
 
 .accordion__text {
@@ -168,40 +156,49 @@
   color: #fafafa;
 }
 
+.accordion__text__last {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
 .accordion__text:not(:last-child) {
   padding-bottom: 32px;
 }
+
 .accordion__item--active .accordion__content {
-  display: block;
-  color: #fafafa;
+  height: auto;
+}
+
+.accordion__button:focus+.accordion__content {
   max-height: 1000px;
+  color: #fafafa;
 }
 
 .accordion__text__last:not(:last-child) {
   padding-bottom: 10px;
-  font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
-letter-spacing: -0.02em;
 }
 
 @media screen and (min-width: 768px) {
   .accordion__text:not(:last-child) {
     padding-bottom: 16px;
   }
+
   .accordion__item {
     padding: 32px 0;
   }
+
   .accordion__button {
     padding: 0 0 8px 0;
   }
+
   .accordion__button svg {
     width: 40px;
     height: 40px;
   }
-  .br-fon{
-    display: none;
-  }
+
   .open-close {
     width: 20px;
     height: 20px;
@@ -212,14 +209,17 @@ letter-spacing: -0.02em;
   .accordion__text:not(:last-child) {
     padding-bottom: 32px;
   }
+
   .accordion__content {
     padding-left: 696px;
   }
+
   .accordion__text {
     width: 612px;
   }
-  .br-fon{
-    display: block;
+
+  .accordion__text__last {
+    width: 465px;
   }
 }
 
@@ -276,6 +276,7 @@ letter-spacing: -0.02em;
   width: 28px;
   height: 28px;
 }
+
 .icon-right {
   fill: transparent;
   stroke-width: 2px;
@@ -290,17 +291,21 @@ letter-spacing: -0.02em;
     margin-top: 64px;
     gap: 64px;
   }
+
   .skills-swiper-button {
     width: 40px;
     height: 40px;
   }
+
   .icon-right {
     width: 40px;
     height: 40px;
   }
+
   .swiper-slide--item {
     height: 200px;
   }
+
   .swiper-slide--item-text {
     font-size: 20px;
   }
@@ -308,12 +313,8 @@ letter-spacing: -0.02em;
 
 @media screen and (min-width: 1440px) {
   .skills-slider {
-    margin-top: 64px;
+    margin-top: 72px;
     padding: 32px;
-    padding-bottom: 0;
     gap: 72px;
   }
-    .about-me {
-      padding-top: 96px;
-    }
 }
