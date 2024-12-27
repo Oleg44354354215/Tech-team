@@ -1,0 +1,38 @@
+/* .picture-img {
+    display: none;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 150px;
+    z-index: 1;
+    margin-left: -10%;
+}
+@media screen and (min-width: 1440px) {
+    .picture-img {
+        display: block;
+        animation: ballbounce 20s linear infinite;
+        animation-fill-mode: both;
+    }
+}
+@keyframes ballbounce {
+    0% {
+        left: 0%;
+        animation-timing-function: linear;
+    }
+    100% {
+        left: 100%;
+        animation-timing-function: linear;
+    }
+}
+@media only screen and (min-width: 768px) {
+    @keyframes ballbounce {
+        0% {
+            left: 0%;
+            animation-timing-function: linear;
+        }
+        100% {
+            left: 100%;
+            animation-timing-function: linear;
+        }
+    }
+} */
