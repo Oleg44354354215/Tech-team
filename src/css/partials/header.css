@@ -265,6 +265,9 @@
   
   .modal-order-btn {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     bottom: 64px;
     left: 50%;
     transform: translateX(-50%);
