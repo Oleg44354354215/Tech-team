@@ -2,10 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./img/page-logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>DOC</title>
+    <title>Dinero</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,9 +29,16 @@
       <load src="./partials/covers.html" />
       <load src="./partials/reviews.html" />
     </main>
-
     <load src="./partials/footer.html" />
     <load src="./partials/scroll-up.html" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+    <!-- <script src="jquery-snow.js"></script> -->
+    <script>
+      $(document).ready(function () {
+        $.fn.snow();
+      });
+    </script>
 
     <script type="module" src="./main.js"></script>
   </body>

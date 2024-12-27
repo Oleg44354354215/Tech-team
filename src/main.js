@@ -1,3 +1,4 @@
+import './js/partials/jquery-snow';
 import './js/partials/header';
 import './js/partials/hero';
 import './js/partials/about-me';
