@@ -40,8 +40,10 @@
   gap: 4px;
 }
 .contact-item {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   text-align: center;
+  align-items: center;
   line-height: 37px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
